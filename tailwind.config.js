@@ -8,9 +8,9 @@ export default {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
+    require('daisyui')
   ],
   daisyui: {
-    themes:["coffee"]
+    themes:["business"]
   }
 }

@@ -1,17 +1,17 @@
-import Navbar from '../components/Navbar/Navbar';
-import CoinTable from '../components/CoinTable/CoinTable';
+import CoinTable from './components/CoinTable/CoinTable.jsx'
 import './App.css'
+import Banner from './components/Banner/Banner.jsx';
+import Navbar from "./components/Navbar/Navbar.jsx"
 
 function App() {
     return(
-       <div>
-       <Navbar />
-        <h1>Hello</h1>
-         <button className="btn btn-primary">
-        DaisyUI Working 🌼
-      </button>
-        <CoinTable />
-        </div>
+       <>
+           <Navbar />
+           <Banner />
+          <CoinTable />
+       </>
+        
+        
     )
 }
 
