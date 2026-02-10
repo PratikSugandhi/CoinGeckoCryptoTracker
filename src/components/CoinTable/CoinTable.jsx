@@ -4,6 +4,8 @@ import { fetchCoinData } from "../../services/fetchCoinData";
 function CoinTable()
 {
     const [page, setPage] = useState(1);
+    // meaning of below useQuery 
+    //“Get coin data for the current page in USD. Cache it for 2 minutes. Treat it as fresh for 2 minutes. Don’t auto-retry API failures (to save request limits). Each page has its own cache.”
     const { data, isLoading, isError, error} = useQuery(['coins', page], () => fetchCoinData(page, 'usd'), {
         // retry: 2,
         // retryDelay: 1000,
