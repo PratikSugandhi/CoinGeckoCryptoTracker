@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { useQuery } from "react-query";
 import { fetchCoinData } from "../../services/fetchCoinData";
-function CoinTable()
+function CoinTable({ currency })
 {
     const [page, setPage] = useState(1);
     // meaning of below useQuery 
     //“Get coin data for the current page in USD. Cache it for 2 minutes. Treat it as fresh for 2 minutes. Don’t auto-retry API failures (to save request limits). Each page has its own cache.”
-    const { data, isLoading, isError, error} = useQuery(['coins', page], () => fetchCoinData(page, 'usd'), {
+    const { data, isLoading, isError, error} = useQuery(['coins', page,currency], () => fetchCoinData(page, currency), {
         // retry: 2,
         // retryDelay: 1000,
         // Above is commented so that again and again retrying api limit should not exhaust.
