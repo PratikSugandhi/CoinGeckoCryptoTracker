@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useQuery } from "react-query";
 import { fetchCoinData } from "../../services/fetchCoinData";
-function CoinTable({ currency })
+import { CurrencyContext } from "../../context/CurrencyContext";
+function CoinTable()
 {
+    const {currency}=useContext(CurrencyContext);
     const [page, setPage] = useState(1);
     // meaning of below useQuery 
     //“Get coin data for the current page in USD. Cache it for 2 minutes. Treat it as fresh for 2 minutes. Don’t auto-retry API failures (to save request limits). Each page has its own cache.”
