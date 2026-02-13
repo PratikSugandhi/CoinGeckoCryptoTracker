@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar.jsx"
 // import { useState } from 'react';
 // import { CurrencyContext } from './context/CurrencyContext.js';
 import Home from './pages/Home.jsx';
+import Routing from './components/Routing/Routing.jsx';
 function App() {
     //   const [currency, setCurrency] = useState('usd')
     return(
@@ -12,7 +13,7 @@ function App() {
            {/* <CurrencyContext.Provider value={ {currency, setCurrency} }>
              <Home />
            </CurrencyContext.Provider> */}
-           <Home />
+           <Routing />
        </>
         
         
