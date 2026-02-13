@@ -13,6 +13,7 @@ function App() {
            {/* <CurrencyContext.Provider value={ {currency, setCurrency} }>
              <Home />
            </CurrencyContext.Provider> */}
+            
            <Routing />
        </>
         
