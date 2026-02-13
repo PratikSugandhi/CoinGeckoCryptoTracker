@@ -1,6 +1,6 @@
 import axiosInstance from "../helpers/axoisInstance";
 
-export async function fetchCoinData() {
+export async function fetchCoinDetails(id) {
     const perPage=20;
     try {
         const response=await axiosInstance.get(`/coins/${id}`);
@@ -12,3 +12,4 @@ export async function fetchCoinData() {
         return null;
     }
 }
+export default fetchCoinDetails;
