@@ -3,8 +3,10 @@ import { useQuery } from "react-query";
 import currencyStore from '../state/store';
 import fetchCoinDetails from "../services/fetchCoinDetails";
 import parse from 'html-react-parser'
+import PageLoader from '../components/PageLoader/PageLoader'
 function CoinDetailsPage()
 {
+    
     const {coinId}=useParams();
     // useParams is use when you want to transfer data from one page to other via url portion then use this hook which is provided by react-router-dom
 
@@ -16,9 +18,8 @@ function CoinDetailsPage()
     });
 
     if(isLoading) {
-        return <div>Loading...</div>
+        return <PageLoader />
     }
-
     if(isError) {
         return <div>Error: Something went wrong</div>
     }
