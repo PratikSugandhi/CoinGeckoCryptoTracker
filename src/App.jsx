@@ -1,3 +1,4 @@
+// To run the project type on terminal npm run dev
 import CoinTable from './components/CoinTable/CoinTable.jsx'
 import './App.css'
 import Banner from './components/Banner/Banner.jsx';
